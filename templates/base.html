@@ -1,0 +1,9 @@
+<!doctype html>
+<head>
+  <title>{% block title %}Hello from Flask{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/globals.css') }}">
+</head>
+
+<body>
+  {% block content %}{% endblock %}
+</body>
