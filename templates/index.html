@@ -1,6 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <main>
-    </main>
+  <!-- UI Elements -->
+  <div id="ui-container">
+    <h1>Time Dilation Simulator</h1>
+    <div class="slider-container">
+      <label for="velocity">Velocity (m/s): <span id="velocity-value">0</span></label> <br/>
+      <input type="range" id="velocity" name="velocity" min="0" max="299792457" step="1000000" value="0">
+    </div>
+    <div class="info">
+      <p>Proper Time (t₀): <span id="t0-display">1</span> s</p>
+      <p>Lorentz Factor (γ): <span id="gamma">1</span></p>
+      <p>Dilated Time: <span id="dilated-time">1</span> s</p>
+    </div>
+  </div>
+
+  <!-- Container for Three.js Canvas -->
+  <div id="three-container"></div>
+
+  <!-- Include Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+{% endblock %}
+
+{% block js %}
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 {% endblock %}

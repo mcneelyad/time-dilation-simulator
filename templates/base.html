@@ -1,9 +1,10 @@
 <!doctype html>
 <head>
-  <title>{% block title %}Hello from Flask{% endblock %}</title>
+  <title>{% block title %}Time Dilation Simulator with Visuals{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/globals.css') }}">
 </head>
 
 <body>
   {% block content %}{% endblock %}
+  {% block js %}{% endblock %}
 </body>
